@@ -1,0 +1,92 @@
+.card {
+    background: #fff;
+    margin: 0 20px;
+    padding: 0 10px;
+    border-radius: 20px;
+    border: 0;
+}
+
+.card-img-top {
+    max-width: 100px;
+    border-radius: 50%;
+    margin: 15px auto 0;
+    box-shadow: 0 8px 20px -4px #95abbb;
+    height: 100px;
+    width: 100px;
+}
+
+h4 {
+    color: #01b0f8;
+    font-size: 21px;
+    line-height: 1, 3;
+}
+
+h4 span {
+    font-size: 18px;
+    color: #66666666;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+    padding-bottom: 15px;
+}
+
+.carousel-indicators {
+    left: 0;
+    top: auto;
+    bottom: -60px;
+}
+
+
+/* gallery */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+
+/* Create four equal columns that sits next to each other */
+
+.column {
+    flex: 25%;
+    max-width: 33.3%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    filter: grayscale(1) brightness(0.9);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.column img:hover {
+    filter: grayscale(0);
+    transform: translateY(-40px);
+}
+
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .column img {
+        filter: grayscale(0) brightness(1);
+    }
+}

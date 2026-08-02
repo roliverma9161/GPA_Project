@@ -1,0 +1,99 @@
+.nav-item a {
+    color: #fff;
+}
+
+.nav-item a:hover {
+    color: white;
+}
+
+.round {
+    animation-name: ghoomo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    /* transition: 1s; */
+}
+
+@keyframes ghoomo {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.reg {
+    background-image: linear-gradient(to left, #33FFCC, #CCFF99);
+}
+
+label {
+    font-weight: 700;
+}
+
+.card {
+    background-color: rgb(250, 144, 250);
+}
+
+#i1 {
+    text-transform: uppercase;
+}
+
+#i1:hover {
+    background-color: orange;
+}
+
+@media(min-width:900px) {
+    #i1 {
+        margin-left: 30px;
+    }
+}
+
+.notice-text {
+    text-align: center;
+    margin-left: 20px;
+}
+
+.notice-text,
+i {
+    margin-left: 20px;
+}
+
+.icon:hover {
+    color: #000;
+}
+
+.hyy {
+    margin-bottom: 10px;
+}
+
+@media(max-width:990px) {
+    .res-img {
+        height: 400px;
+        width: 400px;
+    }
+}
+
+.f-a,
+a {
+    text-decoration: none;
+}
+
+.f-chizen {
+    background-color: #000;
+    color: white;
+}
+
+.f-chizen,
+p {
+    color: white;
+}
+
+footer {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* https://youtu.be/QtDgtFuyJGY?si=u7K22XiptHqoEikc */
+
+
+/* https://youtu.be/QtDgtFuyJGY?si=u7K22XiptHqoEikc */

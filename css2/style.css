@@ -1,0 +1,77 @@
+.nav-item a {
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-item a:hover {
+    color: white;
+}
+
+.round {
+    animation-name: ghoomo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    /* transition: 1s; */
+}
+
+@keyframes ghoomo {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#i1 {
+    text-transform: uppercase;
+}
+
+#i1:hover {
+    background-color: orange;
+}
+
+@media(min-width:900px) {
+    #i1 {
+        margin-left: 30px;
+    }
+}
+
+.icon:hover {
+    color: #000;
+}
+
+.section-head {
+    margin-bottom: 60px;
+}
+
+.section-head h4 {
+    position: relative;
+    padding: 0;
+    color: #f91942;
+    line-height: 1;
+    letter-spacing: 0.3;
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: none;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-head h4::before {
+    content: '';
+    width: 200px;
+    height: 3px;
+    background: #f91942;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+
+/* https://youtu.be/QtDgtFuyJGY?si=u7K22XiptHqoEikc */

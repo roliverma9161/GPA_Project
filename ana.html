@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StopWatch</title>
+</head>
+<style>
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        background: black;
+        font-size: 25px;
+    }
+    
+    .container {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    
+    .watch {
+        font-family: Orbitron;
+        color: chartreuse;
+        font-size: 2.2rem;
+        border: 2px solid chartreuse;
+        padding: 35px 70px;
+        box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem red, 0 0 0.8rem red, 0 0 2.8rem red, inset 0 0 1.3rem red;
+    }
+    
+    button {
+        margin-bottom: 70px;
+        margin-left: 20px;
+        font-size: 1rem;
+        font-family: Orbitron;
+        padding: 25px;
+        border: 2px solid #bc13fe;
+        background-color: black;
+        color: #fff;
+        box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem green, 0 0 0.8rem green, 0 0 2.8rem green, inset 0 0 1.3rem green;
+    }
+    
+    button:hover {
+        background-color: red;
+        color: black;
+        cursor: grab;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div>
+            <button id="start" onclick="start();">Start</button>
+            <button id="stop" onclick="stop();">Stop</button>
+            <button id="reset" onclick="reset()">Reset</button>
+        </div>
+        <div id="watch" class="watch">00:00:00</div>
+    </div>
+
+    <script>
+        let sec = 0;
+        let m = 0;
+        let h = 0;
+
+        let isTimerStart = false;
+
+        setInterval(function() {
+            if (isTimerStart) {
+                sec++;
+                if (sec === 60) {
+                    m++;
+                    sec = 0;
+                }
+
+                if (m === 60) {
+                    h++;
+                    sec = 0;
+                    m = 0;
+                }
+                sec = sec < 10 ? "0" + sec : sec;
+                m = m < 10 ? "0" + parseInt(m) : m;
+                h = h < 10 ? "0" + parseInt(h) : h;
+
+                document.getElementById("watch").innerHTML = `${h}:${m}:${sec}`;
+            }
+        }, 1000);
+
+        function start() {
+            isTimerStart = true;
+        }
+
+        function stop() {
+            isTimerStart = false;
+        }
+
+        function reset() {
+            isTimerStart = false;
+            document.getElementById("watch").innerHTML = `00:00:00`;
+            sec = 0;
+            m = 0;
+            h = 0;
+        }
+    </script>
+</body>
+
+</html>

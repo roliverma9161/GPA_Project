@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/testimonial.css">
+    <link rel="stylesheet" href="/css/admission.css">
+    <style>
+        body {
+            /* Created with https://www.css-gradient.com */
+            background: white;
+        }
+        
+        h1 {
+            color: #fff;
+        }
+        
+        .lead {
+            color: #aaa;
+        }
+        
+        .wrapper {
+            margin: 10vh
+        }
+        
+        .text-dark {
+            font-size: 20px;
+        }
+        
+        .card {
+            border: none;
+            transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+            overflow: hidden;
+            border-radius: 20px;
+            min-height: 450px;
+            box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+            @media (max-width: 768px) {
+                min-height: 350px;
+            }
+            @media (max-width: 420px) {
+                min-height: 300px;
+            }
+            &.card-has-bg {
+                transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+                background-size: 120%;
+                background-repeat: no-repeat;
+                background-position: center center;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: inherit;
+                    -webkit-filter: grayscale(1);
+                    -moz-filter: grayscale(100%);
+                    -ms-filter: grayscale(100%);
+                    -o-filter: grayscale(100%);
+                    filter: grayscale(100%);
+                }
+                &:hover {
+                    transform: scale(0.98);
+                    box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.3);
+                    background-size: 130%;
+                    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+                    .card-img-overlay {
+                        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+                        background: rgb(255, 186, 33);
+                        background: linear-gradient(0deg, rgba(255, 186, 33, 0.5) 0%, rgba(255, 186, 33, 1) 100%);
+                    }
+                }
+            }
+            .card-footer {
+                background: none;
+                border-top: none;
+                .media {
+                    img {
+                        border: solid 3px rgba(255, 255, 255, 0.3);
+                    }
+                }
+            }
+            .card-title {
+                font-weight: 800
+            }
+            .card-meta {
+                color: rgba(0, 0, 0, 0.3);
+                text-transform: uppercase;
+                font-weight: 500;
+                letter-spacing: 2px;
+            }
+            .card-body {
+                transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+            }
+            &:hover {
+                .card-body {
+                    margin-top: 30px;
+                    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+                }
+                cursor: pointer;
+                transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+            }
+            .card-img-overlay {
+                transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+                background: rgb(255, 186, 33);
+                background: linear-gradient(0deg, rgba(255, 186, 33, 0.3785889355742297) 0%, rgba(255, 186, 33, 1) 100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row p-0">
+            <ul class="nav bg-warning">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-phone round mx-1"></i>+91
+                        99366067854</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#"><i
+                            class="fa-solid fa-envelope mx-1"></i>info@gmail.com</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="#"><i class="fa-solid fa-user  "></i>
+                    <!--  -->
+                    <!-- Button trigger modal -->
+<button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Log in
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-danger" id="exampleModalLabel">Enter email and password   </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="card">
+            <div class="card-body">
+               
+                <form action="#">
+               
+                    <input type="text" name="" id="" class="form-control my-3 py-2" placeholder="username">
+                    <input type="password" name="" id="" class="form-control my-3 py-2" placeholder="password">
+                </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Log in</button>
+        </div>
+      </div>
+    </div>
+  </div>
+                        <!--  -->
+                    </a>
+                </li>
+                <li class="nav-item ms-auto">
+                    <a class="nav-link " class="" aria-current="page" href="#">Follow us:</a>
+                </li>
+                <li class="nav-item ">
+                    <a class=" " class="" aria-current="page" href="#"><i
+                            class="fa-brands fa-facebook py-3 ms-2 icon"></i></a>
+                </li>
+                <li class="nav-item ">
+                    <a class=" " class="" aria-current="page" href="#"><i
+                            class="fa-brands fa-instagram py-3 ms-2 icon"></i></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="" class="" aria-current="page" href="#"><i
+                            class="fa-brands fa-linkedin py-3 ms-2 icon"></i></a>
+                </li>
+                <li class="nav-item pe-5">
+                    <a class="" class="" aria-current="page" href="#"><i
+                            class="fa-brands fa-twitter py-3 ms-2 pe-5 icon"></i></a>
+                </li>
+
+
+
+            </ul>
+        </div>
+        <!-- second navbar start -->
+        <div class="row">
+            <div class="col-sm-3 p-0">
+                <a class="navbar-brand" href="#">
+                    <img src="./img/Aadampur logo.jpeg" class="ms-5" height="120" width="150" /> </a>
+
+
+            </div>
+            <div class="col-sm-6">
+                <h2 class="my-3">Goverment Polytechnic ,Aadampur,Gonda</h2>
+                <p>Affiliated to:Uttar Pradesh Board of Technical Eduation</p>
+
+
+            </div>
+            <div class="col-sm-3 py-4">
+                <button class="btn btn-warning mt-3 text-light" href="./About us page.html"><i class="fas fa-users me-2 text-light"></i>About us
+                </button>
+                <button class="btn btn-warning mt-3 text-light " href="branch2.html"><i class="fas fa-book me-2 text-light"></i><a
+                        href="./branch2.html" style="text-decoration: none; color: white;">Branches
+                        Offered</a></button>
+
+            </div>
+        </div>
+
+        <!-- second navbar end-->
+
+
+        <!--dark navbar start-->
+        <div class="row bg-dark">
+            <nav class="navbar navbar-expand-lg">
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header bg-dark text-white">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><span class="text-warning">Gpat
+                            </span>Gonda</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body bg-dark text-white">
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3  ">
+                            <li class="nav-item ">
+                                <a class="nav-link" aria-current="page" href="./index.html" id="i1">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="./About us page.html" id="i1">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#" id="i1">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="./gallery.html" id="i1">Gallery</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="./contactus.html" id="i1">Contact Us</a>
+                            </li>
+                            <li class="nav-item dropdown" id="i1">
+                                <a class="nav-link dropdown-toggle " href="./Admission.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Addmission
+                            </a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item text-dark" href="./Admission.html">Admission Policy</a>
+                                    </li>
+                                    <li><a class="dropdown-item text-dark" href="./Admission.html">Addmission Fee</a></li>
+
+                                    <li><a class="dropdown-item text-dark" href="./Admission.html">Reservation Policy</a></li>
+                                    <li><a class="dropdown-item text-dark" href="./Admission.html">Admission Retension Policy</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown" id="i1">
+                                <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Academics
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item text-dark" href="./Time Table OS 2024-25 29-Aug-2024 11-37-28(1).pdf">Time Table</a>
+                                    </li>
+                                    <li><a class="dropdown-item text-dark" href="#">Library</a></li>
+
+                                    <li><a class="dropdown-item text-dark" href="./calender2024.jpg">Holiday</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <a href="#" class="login-button text-decoration-none">Contact</a> -->
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <span class="navbar-toggler-icon"><i class="ri-menu-2-fill text-white"></i></span>
+                </button>
+
+            </nav>
+        </div>
+
+        <!--dark navbar end-->
+
+
+
+        <section class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center mb-5">
+                        <h1 class="display-4 font-weight-bolder">Branches Offered</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+
+                        <div class="card text-dark card-has-bg click-col" style="background-image:url('https://api.unsplash.com/search/collections?page=1&query=office');">
+                            <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Creative Manner Design Lorem Ipsum Sit Amet Consectetur dipisi?">
+                            <div class="card-img-overlay d-flex flex-column">
+                                <div class="card-body">
+                                    <small class="card-meta mb-2">Goverment Polytechnic Aadampur Gonda</small>
+                                    <h4 class="card-title mt-0 ">
+                                        <a class="text-dark" herf="https://creativemanner.com"> Mechanical <span class="">Engineering (Automobile)</span></a>
+                                    </h4>
+                                    <div class="mt-3">
+                                        <img src="https://media.istockphoto.com/id/695596712/photo/metal-wheel-concept.jpg?s=612x612&w=0&k=20&c=gp_Rqn-I-EfhcMZosaYx-AVKT4McurTOxvWhbKnkmp8=" height="130" alt="" width="100%">
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="media">
+                                        <img class="mr-3 rounded-circle" src="img/Aadampur logo.jpeg" style="max-width:80px">
+                                        <div class="media-body">
+                                            <h5 class="my-2 text-dark d-block">
+                                                <a href="/branch_data/cseDataTable.html" class="btn btn-outline-primary rounded ml-4 my-2" style="text-decoration: none;">View Details</a>
+                                            </h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card text-dark card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?tree,nature');">
+                            <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tree,nature" alt="Creative Manner Design Lorem Ipsum Sit Amet Consectetur dipisi?">
+                            <div class="card-img-overlay d-flex flex-column">
+                                <div class="card-body">
+                                    <small class="card-meta mb-2">Goverment Polytechnic Aadampur Gonda</small>
+                                    <h4 class="card-title mt-0 ">
+                                        <a class="text-dark" herf="https://creativemanner.com">Mechanical Engineering (Production)</a>
+                                    </h4>
+                                    <div class="mt-3">
+                                        <img src="https://media.istockphoto.com/id/501196157/photo/technically-electronic-background.jpg?s=612x612&w=0&k=20&c=_htnPlJ_tfcAZJ48SsGG6qDDA87zQXkcquHQaP1tryU=" height="130" alt="" width="100%">
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="media">
+                                        <img class="mr-3 rounded-circle" src="img/Aadampur logo.jpeg" style="max-width:80px">
+
+                                        <div class="media-body">
+                                            <h5 class="my-2 text-dark d-block">
+                                                <a href="/branch_data/cseDataTable.html" class="btn btn-outline-primary rounded ml-4 my-2" style="text-decoration: none;">View Details</a>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card text-dark card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?computer,design');">
+                            <img class="card-img d-none" src="https://source.unsplash.com/600x900/?computer,design" alt="Creative Manner Design Lorem Ipsum Sit Amet Consectetur dipisi?">
+                            <div class="card-img-overlay d-flex flex-column">
+                                <div class="card-body">
+                                    <small class="card-meta mb-2">Goverment Polytechnic Aadampur Gonda</small>
+                                    <h4 class="card-title mt-0 ">
+                                        <a class="text-dark" herf="https://creativemanner.com">Computer Science & Engineering </a>
+                                    </h4>
+                                    <div class="mt-3">
+                                        <img src="./img/computer.png" height="130" alt="" width="100%">
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="media">
+                                        <img class="mr-3 rounded-circle" src="img/Aadampur logo.jpeg" style="max-width:80px">
+
+                                        <div class="media-body">
+                                            <h5 class="my-2 text-dark d-block">
+                                                <a href="/branch_data/cseDataTable.html" class="btn btn-outline-primary rounded ml-4 my-2" style="text-decoration: none;">View Details</a>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card text-dark card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?tech,street');">
+                            <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt=" Lorem Ipsum Sit Amet Consectetur dipisi?">
+                            <div class="card-img-overlay d-flex flex-column">
+                                <div class="card-body">
+                                    <small class="card-meta mb-2">Goverment Polytechnic Aadampur Gonda</small>
+                                    <h4 class="card-title mt-0 ">
+                                        <a class="text-dark" herf="https://creativemanner.com">Mechanical  Engineering Automobile <br>  (Lateral Entery)
+                                    </a>
+                                    </h4>
+                                    <div class="mt-3">
+                                        <img src="https://media.istockphoto.com/id/695596712/photo/metal-wheel-concept.jpg?s=612x612&w=0&k=20&c=gp_Rqn-I-EfhcMZosaYx-AVKT4McurTOxvWhbKnkmp8=" height="130" alt="" width="100%">
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="media">
+                                        <img class="mr-3 rounded-circle" src="img/Aadampur logo.jpeg" style="max-width:80px">
+
+                                        <div class="media-body">
+                                            <h5 class="my-2 text-dark d-block">
+                                                <a href="/branch_data/cseDataTable.html" class="btn btn-outline-primary rounded ml-4 my-2" style="text-decoration: none;">View Details</a>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card text-dark card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?tree,nature');">
+                            <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tree,nature" alt="Creative Manner Design Lorem Ipsum Sit Amet Consectetur dipisi?">
+                            <div class="card-img-overlay d-flex flex-column">
+                                <div class="card-body">
+                                    <small class="card-meta mb-2">Goverment Polytechnic Aadampur Gonda</small>
+                                    <h4 class="card-title mt-0 ">
+                                        <a class="text-dark" herf="https://creativemanner.com">Mechanical Engineering (Production)<br> (Lateral Entery)</a>
+                                    </h4>
+                                    <div class="mt-3">
+                                        <img src="https://media.istockphoto.com/id/695596712/photo/metal-wheel-concept.jpg?s=612x612&w=0&k=20&c=gp_Rqn-I-EfhcMZosaYx-AVKT4McurTOxvWhbKnkmp8=" height="130" alt="" width="100%">
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="media">
+                                        <img class="mr-3 rounded-circle" src="img/Aadampur logo.jpeg" style="max-width:80px">
+
+                                        <div class="media-body">
+                                            <h5 class="my-2 text-dark d-block">
+                                                <a href="/branch_data/cseDataTable.html" class="btn btn-outline-primary rounded ml-4 my-2" style="text-decoration: none;">View Details</a>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card text-dark card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?computer,design');">
+                            <img class="card-img d-none" src="https://source.unsplash.com/600x900/?computer,design" alt="Creative Manner Design Lorem Ipsum Sit Amet Consectetur dipisi?">
+                            <div class="card-img-overlay d-flex flex-column">
+                                <div class="card-body">
+                                    <small class="card-meta mb-2">Goverment Polytechnic Aadampur Gonda</small>
+                                    <h4 class="card-title mt-0 ">
+                                        <a class="text-dark" herf="https://creativemanner.com">Computer Science and Engineering <br>(Lateral Entery)</a>
+                                    </h4>
+                                    <div class="mt-3">
+                                        <img src="./img/computer.png" height=" 130 " alt=" " width="100% ">
+                                    </div>
+                                </div>
+                                <div class="card-footer ">
+                                    <div class="media ">
+                                        <img class="mr-3 rounded-circle " src="img/Aadampur logo.jpeg " style="max-width:80px ">
+
+                                        <div class="media-body ">
+                                            <h5 class="my-2 text-dark d-block ">
+                                                <a href="/branch_data/cseDataTable.html" class="btn btn-outline-primary rounded ml-4 my-2 " style="text-decoration: none; ">View Details</a>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+
+
+        <!-- Footer -->
+        <div class="row mt-3 ">
+            <footer class="text-center text-lg-start text-dark " style="background-color: orange ">
+                <!-- Section: Social media -->
+                <section class="d-flex justify-content-between bg-dark p-4 text-white mt-5 ">
+                    <!-- Left -->
+                    <div class="me-5 ">
+                        <span>Get connected with us on social networks:</span>
+                    </div>
+                    <!-- Left -->
+
+                    <!-- Right -->
+                    <div class="f-a ">
+                        <a href=" " class="text-white me-4 ">
+                            <i class="fab fa-facebook-f "></i>
+                        </a>
+                        <a href=" " class="text-white me-4 ">
+                            <i class="fab fa-twitter "></i>
+                        </a>
+                        <a href=" " class="text-white me-4 ">
+                            <i class="fab fa-google "></i>
+                        </a>
+                        <a href=" " class="text-white me-4 ">
+                            <i class="fab fa-instagram "></i>
+                        </a>
+                        <a href=" " class="text-white me-4 ">
+                            <i class="fab fa-linkedin "></i>
+                        </a>
+                        <a href=" " class="text-white me-4 ">
+                            <i class="fab fa-github "></i>
+                        </a>
+                    </div>
+                    <!-- Right -->
+                </section>
+                <!-- Section: Social media -->
+
+                <!-- Section: Links  -->
+                <section class="f-chizen ">
+                    <div class="container text-center text-md-start mt-1 ">
+                        <!-- Grid row -->
+                        <div class="row mt-1 ">
+                            <!-- Grid column -->
+                            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 mt-4 ">
+                                <!-- Content -->
+                                <h6 class="text-uppercase fw-bold ">Government Polytechnic Aadampur, Tarabganj, Gonda</h6>
+                                <hr class="mb-4 mt-0 d-inline-block mx-auto " style="width: 60px; background-color: orange; height: 2px " />
+                                <p class="text-white "><i class="fas fa-home mr-3 text-white "></i> New York, NY 10012, US</p>
+                                <p class="text-white "><i class="fas fa-envelope text-white mr-3 "></i> info@example.com</p>
+                                <p class="text-white "><i class="fas fa-phone mr-3 text-white "></i> + 01 234 567 88</p>
+                                <p class="text-white "><i class="fas fa-print mr-3 text-white "></i> + 01 234 567 89</p>
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 mt-4 ">
+                                <!-- Links -->
+                                <h5 class="text-uppercase fw-bold ">Products</h5>
+                                <hr class="mb-4 mt-0 d-inline-block mx-auto " style="width: 60px; background-color: orange; height: 2px " />
+                                <p>
+                                    <a href="./index.html " class="text-white ">Home</a>
+                                </p>
+                                <p>
+                                    <a href="./About us page.html " class="text-white ">about Us</a>
+                                </p>
+                                <p>
+                                    <a href="./gallery.html " class=" text-white ">Gallery</a>
+                                </p>
+                                <p>
+                                    <a href="./gallery.html " class="text-white ">Gallery</a>
+                                </p>
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 mt-4 ">
+                                <!-- Links -->
+                                <h5 class="text-uppercase fw-bold ">Useful links</h5>
+                                <hr class="mb-4 mt-0 d-inline-block mx-auto " style="width: 60px; background-color: orange; height: 2px " />
+                                <p>
+                                    <a href="#! " class="text-white ">NPTEL</a>
+                                </p>
+                                <p>
+                                    <a href="#! " class="text-white ">MOOCS</a>
+                                </p>
+                                <p>
+                                    <a href="#! " class="text-white ">JEECUP</a>
+                                </p>
+                                <p>
+                                    <a href="#! " class="text-white ">NAD</a>
+                                </p>
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-4 ">
+                                <!-- Links -->
+                                <h5 class="text-uppercase fw-bold ">Other Useful Links </h5>
+                                <hr class="mb-4 mt-0 d-inline-block mx-auto " style="width: 60px; background-color: orange; height: 2px " />
+                                <p>
+                                    <a href="#! " class="text-white ">URISE</a>
+                                </p>
+                                <p>
+                                    <a href="#! " class="text-white ">BTEUP</a>
+                                </p>
+                                <p>
+                                    <a href="#! " class="text-white ">JEECUP</a>
+                                </p>
+                                <p>
+                                    <a href="#! " class="text-white ">Swayam</a>
+                                </p>
+                            </div>
+                            <!-- Grid column -->
+                        </div>
+                        <!-- Grid row -->
+                    </div>
+                </section>
+                <!-- Section: Links  -->
+
+                <!-- Copyright -->
+                <div class="text-center p-3 " style="background-color: rgba(0, 0, 0, 0.2) ">
+                    © 2024 Copyright:
+                    <a class="text-white " href="https://mdbootstrap.com/ ">Digicoders Technologies (p)</a>
+                </div>
+                <!-- Copyright -->
+            </footer>
+        </div>
+
+        <!-- End of .container -->
+
+    </div>
+    <!-- End of .container -->
+    <!-- footer end -->
+
+
+
+</body>
+
+</html>
